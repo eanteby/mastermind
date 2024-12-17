@@ -1019,7 +1019,7 @@
             ClientSize = new Size(919, 584);
             Controls.Add(tableLayoutPanel1);
             Name = "frmMastermind";
-            Text = "frmMastermind";
+            Text = "Mastermind";
             tblBoard.ResumeLayout(false);
             tblBoard.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
