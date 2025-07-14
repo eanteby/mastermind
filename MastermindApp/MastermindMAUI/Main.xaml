@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MastermindMAUI.Main"
+             Title="Mastermind">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid ColumnDefinitions="1.5*, 1*, 1.5*">
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="White" Offset=".30"/>
+                <GradientStop Color="DodgerBlue" Offset="1"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
+        <VerticalStackLayout VerticalOptions="End" HorizontalOptions="Start" Margin="10" Spacing="10">
+            <Label x:Name="lblMessage" TextColor="Black" Margin="10, 20, 20, 60" FontSize="30"/>
+            <RadioButton x:Name="optBeginner" Content="Beginner" Value="Beginner" IsChecked="True" FontSize="20"/>
+            <RadioButton x:Name="optAdvanced" Content="Advanced" Value="Advanced" FontSize="20"/>
+            <Button x:Name="btnNewGame" Text="New Game" WidthRequest="150" HeightRequest="65" Margin="10" CornerRadius="2">
+                <Button.Shadow>
+                    <Shadow Brush="Gray"/>
+                </Button.Shadow>
+                <Button.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="LimeGreen" Offset=".5"/>
+                        <GradientStop Color="LawnGreen" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnCheckCode" Text="Check Code" WidthRequest="150" HeightRequest="65" Margin="10" CornerRadius="2">
+                <Button.Shadow>
+                    <Shadow Brush="Gray"/>
+                </Button.Shadow>
+                <Button.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="DeepPink" Offset=".5"/>
+                        <GradientStop Color="HotPink" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </VerticalStackLayout>
+        
+        <Grid ColumnDefinitions="15, *, *, *, *, *, 15" RowDefinitions="2, *, *, *, *, *, *, *, *, *, *, *, 2" HorizontalOptions="Fill" RowSpacing="10" ColumnSpacing="5" BackgroundColor="White" Grid.Column="1" Margin="10">
+            <Grid.Shadow>
+                <Shadow Brush="Gray"/>
+            </Grid.Shadow>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="2" Grid.Column="1">
+                <Button Grid.Column="0" Grid.Row="1"/>
+                <Button Grid.Column="0" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="3" Grid.Column="1">
+                <Button Grid.Column="0" Grid.Row="1"/>
+                <Button Grid.Column="0" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="4" Grid.Column="1">
+                <Button Grid.Column="0" Grid.Row="1"/>
+                <Button Grid.Column="0" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="5" Grid.Column="1">
+                <Button Grid.Column="0" Grid.Row="1"/>
+                <Button Grid.Column="0" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="6" Grid.Column="1">
+                <Button Grid.Column="0" Grid.Row="1"/>
+                <Button Grid.Column="0" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="7" Grid.Column="1">
+                <Button Grid.Column="0" Grid.Row="1"/>
+                <Button Grid.Column="0" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="8" Grid.Column="1">
+                <Button Grid.Column="0" Grid.Row="1"/>
+                <Button Grid.Column="0" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="9" Grid.Column="1">
+                <Button Grid.Column="0" Grid.Row="1"/>
+                <Button Grid.Column="0" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="10" Grid.Column="1">
+                <Button Grid.Column="0" Grid.Row="1"/>
+                <Button Grid.Column="0" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="11" Grid.Column="1">
+                <Button Grid.Column="0" Grid.Row="1"/>
+                <Button Grid.Column="0" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="0"/>
+                <Button Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Button Grid.Column="2" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
+            <Button Grid.Column="3" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
+            <Button Grid.Column="4" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
+            <Button Grid.Column="5" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
+
+            <Button Grid.Column="5" Grid.Row="2"/>
+            <Button Grid.Column="2" Grid.Row="2"/>
+            <Button Grid.Column="3" Grid.Row="2"/>
+            <Button Grid.Column="4" Grid.Row="2"/>
+            
+            <Button Grid.Column="5" Grid.Row="3"/>
+            <Button Grid.Column="2" Grid.Row="3"/>
+            <Button Grid.Column="3" Grid.Row="3"/>
+            <Button Grid.Column="4" Grid.Row="3"/>
+
+            <Button Grid.Column="5" Grid.Row="4"/>
+            <Button Grid.Column="2" Grid.Row="4"/>
+            <Button Grid.Column="3" Grid.Row="4"/>
+            <Button Grid.Column="4" Grid.Row="4"/>
+
+            <Button Grid.Column="5" Grid.Row="5"/>
+            <Button Grid.Column="2" Grid.Row="5"/>
+            <Button Grid.Column="3" Grid.Row="5"/>
+            <Button Grid.Column="4" Grid.Row="5"/>
+
+            <Button Grid.Column="5" Grid.Row="6"/>
+            <Button Grid.Column="2" Grid.Row="6"/>
+            <Button Grid.Column="3" Grid.Row="6"/>
+            <Button Grid.Column="4" Grid.Row="6"/>
+
+            <Button Grid.Column="5" Grid.Row="7"/>
+            <Button Grid.Column="2" Grid.Row="7"/>
+            <Button Grid.Column="3" Grid.Row="7"/>
+            <Button Grid.Column="4" Grid.Row="7"/>
+
+            <Button Grid.Column="5" Grid.Row="8"/>
+            <Button Grid.Column="2" Grid.Row="8"/>
+            <Button Grid.Column="3" Grid.Row="8"/>
+            <Button Grid.Column="4" Grid.Row="8"/>
+
+            <Button Grid.Column="5" Grid.Row="9"/>
+            <Button Grid.Column="2" Grid.Row="9"/>
+            <Button Grid.Column="3" Grid.Row="9"/>
+            <Button Grid.Column="4" Grid.Row="9"/>
+
+            <Button Grid.Column="5" Grid.Row="10"/>
+            <Button Grid.Column="2" Grid.Row="10"/>
+            <Button Grid.Column="3" Grid.Row="10"/>
+            <Button Grid.Column="4" Grid.Row="10"/>
+
+            <Button Grid.Column="5" Grid.Row="11"/>
+            <Button Grid.Column="2" Grid.Row="11"/>
+            <Button Grid.Column="3" Grid.Row="11"/>
+            <Button Grid.Column="4" Grid.Row="11"/>
+
+            <Button Grid.Column="5" Grid.Row="12"/>
+            <Button Grid.Column="2" Grid.Row="12"/>
+            <Button Grid.Column="3" Grid.Row="12"/>
+            <Button Grid.Column="4" Grid.Row="12"/>
+        </Grid>
+        
+        <Button x:Name="btnHelp" Text="?" HeightRequest="75" WidthRequest="75" VerticalOptions="End" HorizontalOptions="End" Margin="20" Grid.Column="3" CornerRadius="2">
+            <Button.Shadow>
+                <Shadow Brush="Gray"/>
+            </Button.Shadow>
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="DarkOrange" Offset=".2"/>
+                    <GradientStop Color="Orange" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</ContentPage>
