@@ -14,14 +14,15 @@ namespace MastermindApp
     public partial class frmMastermind : Form
     {
         List<List<Button>> lstrows;
-        List<Color> lstcolor; 
-        List<String> lstcomments = new() {"You got this!", "You can do it!", "Keep trying!", "Think hard!", "Don't give up!" };
+        List<Color> lstcolor;
+        List<String> lstcomments = new() { "You got this!", "You can do it!", "Keep trying!", "Think hard!", "Don't give up!" };
         List<Button> activerow;
         List<TableLayoutPanel> lsttbl;
         List<Color> colorcode;
         List<Label> lstlbl;
         TableLayoutPanel activetbl;
         int numturnsleft = 10;
+        Color c = new Color();
         enum gamestatusenum {notstarted, playing, won, lost};
         gamestatusenum gamestatus = gamestatusenum.notstarted;
         public frmMastermind()
@@ -47,6 +48,11 @@ namespace MastermindApp
             btnNewGame.Click += BtnNewGame_Click;
             btnHelp.Click += BtnHelp_Click;
             Comment();
+
+            foreach(Button b in tblColors.Controls)
+            {
+                b.Click += B_Click1;
+            }
         }
 
         private void CheckCode()
@@ -99,8 +105,7 @@ namespace MastermindApp
             {
                 if (btn != null && activerow.Exists(b => b == btn))
                 {
-                    int btncolorindex = lstcolor.IndexOf(btn.BackColor);
-                    btn.BackColor = btncolorindex < lstcolor.Count() - 1 ? lstcolor[btncolorindex + 1] : lstcolor[0];
+                    btn.BackColor = c;
                 }
             }
         }
@@ -184,6 +189,15 @@ namespace MastermindApp
             {
                 CheckCode();
             }         
+        }
+
+        private void B_Click1(object? sender, EventArgs e)
+        {
+            if (sender != null && sender is Button)
+            {
+                Button b = (Button)sender;
+                c = b.BackColor;
+            }
         }
 
         private void B_Click(object? sender, EventArgs e)
