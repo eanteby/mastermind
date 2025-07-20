@@ -14,7 +14,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     
-    <Grid ColumnDefinitions="1.5*, 1*, 1.5*">
+    <Grid ColumnDefinitions="1.5*, 1*, .27*, 1.5*">
         <Grid.Background>
             <RadialGradientBrush>
                 <GradientStop Color="White" Offset=".30"/>
@@ -185,6 +185,16 @@
             <Button Grid.Column="3" Grid.Row="12"/>
             <Button Grid.Column="4" Grid.Row="12"/>
         </Grid>
+
+        <VerticalStackLayout Grid.Column="2" Spacing="10" VerticalOptions="Center">
+            <Button BackgroundColor="DeepPink" Text="Pink" Style="{StaticResource Key=color-button}"/>
+            <Button BackgroundColor="Yellow" Text="Yellow" Style="{StaticResource Key=color-button}"/>
+            <Button BackgroundColor="LimeGreen" Text="Green" Style="{StaticResource Key=color-button}"/>
+            <Button BackgroundColor="DeepSkyBlue" Text="Blue" Style="{StaticResource Key=color-button}"/>
+            <Button BackgroundColor="Purple" Text="Purple" Style="{StaticResource Key=color-button}"/>
+            <Button BackgroundColor="Black" Text="Black" Style="{StaticResource Key=color-button}"/>
+
+        </VerticalStackLayout>
         
         <Button x:Name="btnHelp" Text="?" HeightRequest="75" WidthRequest="75" VerticalOptions="End" HorizontalOptions="End" Margin="20" Grid.Column="3" CornerRadius="2">
             <Button.Shadow>
