@@ -29,16 +29,60 @@
         private void InitializeComponent()
         {
             tblBoard = new TableLayoutPanel();
+            btnCode4 = new Button();
+            btnCode3 = new Button();
+            btnCode2 = new Button();
+            btnCode1 = new Button();
             tblRow2 = new TableLayoutPanel();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
             tblRow1 = new TableLayoutPanel();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             tblRow10 = new TableLayoutPanel();
+            label40 = new Label();
+            label39 = new Label();
+            label38 = new Label();
+            label37 = new Label();
             tblRow9 = new TableLayoutPanel();
+            label36 = new Label();
+            label35 = new Label();
+            label34 = new Label();
+            label33 = new Label();
             tblRow8 = new TableLayoutPanel();
+            label32 = new Label();
+            label31 = new Label();
+            label30 = new Label();
+            label29 = new Label();
             tblRow7 = new TableLayoutPanel();
+            label28 = new Label();
+            label27 = new Label();
+            label26 = new Label();
+            label25 = new Label();
             tblRow6 = new TableLayoutPanel();
+            label24 = new Label();
+            label23 = new Label();
+            label22 = new Label();
+            label21 = new Label();
             tblRow5 = new TableLayoutPanel();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            label17 = new Label();
             tblRow4 = new TableLayoutPanel();
+            label16 = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            label13 = new Label();
             tblRow3 = new TableLayoutPanel();
+            label12 = new Label();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
             button40 = new Button();
             button39 = new Button();
             button38 = new Button();
@@ -77,10 +121,6 @@
             button18 = new Button();
             button19 = new Button();
             button20 = new Button();
-            lblCode1 = new Label();
-            lblCode2 = new Label();
-            lblCode3 = new Label();
-            lblCode4 = new Label();
             button21 = new Button();
             button22 = new Button();
             tableLayoutPanel3 = new TableLayoutPanel();
@@ -100,10 +140,20 @@
             btnYellow = new Button();
             btnGreen = new Button();
             btnBlue = new Button();
-            button45 = new Button();
+            btnPurple = new Button();
             btnBlack = new Button();
             btnPink = new Button();
             tblBoard.SuspendLayout();
+            tblRow2.SuspendLayout();
+            tblRow1.SuspendLayout();
+            tblRow10.SuspendLayout();
+            tblRow9.SuspendLayout();
+            tblRow8.SuspendLayout();
+            tblRow7.SuspendLayout();
+            tblRow6.SuspendLayout();
+            tblRow5.SuspendLayout();
+            tblRow4.SuspendLayout();
+            tblRow3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tblMainLeft.SuspendLayout();
             tblButtonsAndComments.SuspendLayout();
@@ -120,6 +170,10 @@
             tblBoard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tblBoard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tblBoard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tblBoard.Controls.Add(btnCode4, 4, 0);
+            tblBoard.Controls.Add(btnCode3, 3, 0);
+            tblBoard.Controls.Add(btnCode2, 2, 0);
+            tblBoard.Controls.Add(btnCode1, 1, 0);
             tblBoard.Controls.Add(tblRow2, 0, 2);
             tblBoard.Controls.Add(tblRow1, 0, 1);
             tblBoard.Controls.Add(tblRow10, 0, 10);
@@ -168,10 +222,6 @@
             tblBoard.Controls.Add(button18, 2, 5);
             tblBoard.Controls.Add(button19, 3, 5);
             tblBoard.Controls.Add(button20, 4, 5);
-            tblBoard.Controls.Add(lblCode1, 1, 0);
-            tblBoard.Controls.Add(lblCode2, 2, 0);
-            tblBoard.Controls.Add(lblCode3, 3, 0);
-            tblBoard.Controls.Add(lblCode4, 4, 0);
             tblBoard.Controls.Add(button21, 1, 6);
             tblBoard.Controls.Add(button22, 2, 6);
             tblBoard.Dock = DockStyle.Fill;
@@ -193,11 +243,75 @@
             tblBoard.Size = new Size(426, 771);
             tblBoard.TabIndex = 0;
             // 
+            // btnCode4
+            // 
+            btnCode4.BackColor = Color.Black;
+            btnCode4.Dock = DockStyle.Fill;
+            btnCode4.FlatStyle = FlatStyle.Popup;
+            btnCode4.Font = new Font("Showcard Gothic", 22.2F);
+            btnCode4.ForeColor = Color.White;
+            btnCode4.Location = new Point(343, 4);
+            btnCode4.Margin = new Padding(3, 4, 3, 4);
+            btnCode4.Name = "btnCode4";
+            btnCode4.Size = new Size(80, 62);
+            btnCode4.TabIndex = 48;
+            btnCode4.Text = "?";
+            btnCode4.UseVisualStyleBackColor = false;
+            // 
+            // btnCode3
+            // 
+            btnCode3.BackColor = Color.Black;
+            btnCode3.Dock = DockStyle.Fill;
+            btnCode3.FlatStyle = FlatStyle.Popup;
+            btnCode3.Font = new Font("Showcard Gothic", 22.2F);
+            btnCode3.ForeColor = Color.White;
+            btnCode3.Location = new Point(258, 4);
+            btnCode3.Margin = new Padding(3, 4, 3, 4);
+            btnCode3.Name = "btnCode3";
+            btnCode3.Size = new Size(79, 62);
+            btnCode3.TabIndex = 47;
+            btnCode3.Text = "?";
+            btnCode3.UseVisualStyleBackColor = false;
+            // 
+            // btnCode2
+            // 
+            btnCode2.BackColor = Color.Black;
+            btnCode2.Dock = DockStyle.Fill;
+            btnCode2.FlatStyle = FlatStyle.Popup;
+            btnCode2.Font = new Font("Showcard Gothic", 22.2F);
+            btnCode2.ForeColor = Color.White;
+            btnCode2.Location = new Point(173, 4);
+            btnCode2.Margin = new Padding(3, 4, 3, 4);
+            btnCode2.Name = "btnCode2";
+            btnCode2.Size = new Size(79, 62);
+            btnCode2.TabIndex = 46;
+            btnCode2.Text = "?";
+            btnCode2.UseVisualStyleBackColor = false;
+            // 
+            // btnCode1
+            // 
+            btnCode1.BackColor = Color.Black;
+            btnCode1.Dock = DockStyle.Fill;
+            btnCode1.FlatStyle = FlatStyle.Popup;
+            btnCode1.Font = new Font("Showcard Gothic", 22.2F);
+            btnCode1.ForeColor = Color.White;
+            btnCode1.Location = new Point(88, 4);
+            btnCode1.Margin = new Padding(3, 4, 3, 4);
+            btnCode1.Name = "btnCode1";
+            btnCode1.Size = new Size(79, 62);
+            btnCode1.TabIndex = 45;
+            btnCode1.Text = "?";
+            btnCode1.UseVisualStyleBackColor = false;
+            // 
             // tblRow2
             // 
             tblRow2.ColumnCount = 2;
             tblRow2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblRow2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblRow2.Controls.Add(label8, 1, 1);
+            tblRow2.Controls.Add(label7, 0, 1);
+            tblRow2.Controls.Add(label6, 1, 0);
+            tblRow2.Controls.Add(label5, 0, 0);
             tblRow2.Dock = DockStyle.Fill;
             tblRow2.Location = new Point(3, 144);
             tblRow2.Margin = new Padding(3, 4, 3, 4);
@@ -208,11 +322,55 @@
             tblRow2.Size = new Size(79, 62);
             tblRow2.TabIndex = 3;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Dock = DockStyle.Fill;
+            label8.Location = new Point(41, 33);
+            label8.Margin = new Padding(2);
+            label8.Name = "label8";
+            label8.Size = new Size(36, 27);
+            label8.TabIndex = 4;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Dock = DockStyle.Fill;
+            label7.Location = new Point(2, 33);
+            label7.Margin = new Padding(2);
+            label7.Name = "label7";
+            label7.Size = new Size(35, 27);
+            label7.TabIndex = 3;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Dock = DockStyle.Fill;
+            label6.Location = new Point(41, 2);
+            label6.Margin = new Padding(2);
+            label6.Name = "label6";
+            label6.Size = new Size(36, 27);
+            label6.TabIndex = 2;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Dock = DockStyle.Fill;
+            label5.Location = new Point(2, 2);
+            label5.Margin = new Padding(2);
+            label5.Name = "label5";
+            label5.Size = new Size(35, 27);
+            label5.TabIndex = 1;
+            // 
             // tblRow1
             // 
             tblRow1.ColumnCount = 2;
             tblRow1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblRow1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblRow1.Controls.Add(label4, 1, 1);
+            tblRow1.Controls.Add(label3, 0, 1);
+            tblRow1.Controls.Add(label2, 1, 0);
+            tblRow1.Controls.Add(label1, 0, 0);
             tblRow1.Dock = DockStyle.Fill;
             tblRow1.Location = new Point(3, 74);
             tblRow1.Margin = new Padding(3, 4, 3, 4);
@@ -223,11 +381,55 @@
             tblRow1.Size = new Size(79, 62);
             tblRow1.TabIndex = 3;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Dock = DockStyle.Fill;
+            label4.Location = new Point(41, 33);
+            label4.Margin = new Padding(2);
+            label4.Name = "label4";
+            label4.Size = new Size(36, 27);
+            label4.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Dock = DockStyle.Fill;
+            label3.Location = new Point(2, 33);
+            label3.Margin = new Padding(2);
+            label3.Name = "label3";
+            label3.Size = new Size(35, 27);
+            label3.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Fill;
+            label2.Location = new Point(41, 2);
+            label2.Margin = new Padding(2);
+            label2.Name = "label2";
+            label2.Size = new Size(36, 27);
+            label2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Fill;
+            label1.Location = new Point(2, 2);
+            label1.Margin = new Padding(2);
+            label1.Name = "label1";
+            label1.Size = new Size(35, 27);
+            label1.TabIndex = 0;
+            // 
             // tblRow10
             // 
             tblRow10.ColumnCount = 2;
             tblRow10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblRow10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblRow10.Controls.Add(label40, 1, 1);
+            tblRow10.Controls.Add(label39, 0, 1);
+            tblRow10.Controls.Add(label38, 1, 0);
+            tblRow10.Controls.Add(label37, 0, 0);
             tblRow10.Dock = DockStyle.Fill;
             tblRow10.Location = new Point(3, 704);
             tblRow10.Margin = new Padding(3, 4, 3, 4);
@@ -238,11 +440,55 @@
             tblRow10.Size = new Size(79, 63);
             tblRow10.TabIndex = 11;
             // 
+            // label40
+            // 
+            label40.AutoSize = true;
+            label40.Dock = DockStyle.Fill;
+            label40.Location = new Point(41, 33);
+            label40.Margin = new Padding(2);
+            label40.Name = "label40";
+            label40.Size = new Size(36, 28);
+            label40.TabIndex = 4;
+            // 
+            // label39
+            // 
+            label39.AutoSize = true;
+            label39.Dock = DockStyle.Fill;
+            label39.Location = new Point(2, 33);
+            label39.Margin = new Padding(2);
+            label39.Name = "label39";
+            label39.Size = new Size(35, 28);
+            label39.TabIndex = 3;
+            // 
+            // label38
+            // 
+            label38.AutoSize = true;
+            label38.Dock = DockStyle.Fill;
+            label38.Location = new Point(41, 2);
+            label38.Margin = new Padding(2);
+            label38.Name = "label38";
+            label38.Size = new Size(36, 27);
+            label38.TabIndex = 2;
+            // 
+            // label37
+            // 
+            label37.AutoSize = true;
+            label37.Dock = DockStyle.Fill;
+            label37.Location = new Point(2, 2);
+            label37.Margin = new Padding(2);
+            label37.Name = "label37";
+            label37.Size = new Size(35, 27);
+            label37.TabIndex = 1;
+            // 
             // tblRow9
             // 
             tblRow9.ColumnCount = 2;
             tblRow9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblRow9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblRow9.Controls.Add(label36, 1, 1);
+            tblRow9.Controls.Add(label35, 0, 1);
+            tblRow9.Controls.Add(label34, 1, 0);
+            tblRow9.Controls.Add(label33, 0, 0);
             tblRow9.Dock = DockStyle.Fill;
             tblRow9.Location = new Point(3, 634);
             tblRow9.Margin = new Padding(3, 4, 3, 4);
@@ -253,11 +499,55 @@
             tblRow9.Size = new Size(79, 62);
             tblRow9.TabIndex = 10;
             // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Dock = DockStyle.Fill;
+            label36.Location = new Point(41, 33);
+            label36.Margin = new Padding(2);
+            label36.Name = "label36";
+            label36.Size = new Size(36, 27);
+            label36.TabIndex = 4;
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Dock = DockStyle.Fill;
+            label35.Location = new Point(2, 33);
+            label35.Margin = new Padding(2);
+            label35.Name = "label35";
+            label35.Size = new Size(35, 27);
+            label35.TabIndex = 3;
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Dock = DockStyle.Fill;
+            label34.Location = new Point(41, 2);
+            label34.Margin = new Padding(2);
+            label34.Name = "label34";
+            label34.Size = new Size(36, 27);
+            label34.TabIndex = 2;
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Dock = DockStyle.Fill;
+            label33.Location = new Point(2, 2);
+            label33.Margin = new Padding(2);
+            label33.Name = "label33";
+            label33.Size = new Size(35, 27);
+            label33.TabIndex = 1;
+            // 
             // tblRow8
             // 
             tblRow8.ColumnCount = 2;
             tblRow8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblRow8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblRow8.Controls.Add(label32, 1, 1);
+            tblRow8.Controls.Add(label31, 0, 1);
+            tblRow8.Controls.Add(label30, 1, 0);
+            tblRow8.Controls.Add(label29, 0, 0);
             tblRow8.Dock = DockStyle.Fill;
             tblRow8.Location = new Point(3, 564);
             tblRow8.Margin = new Padding(3, 4, 3, 4);
@@ -268,11 +558,55 @@
             tblRow8.Size = new Size(79, 62);
             tblRow8.TabIndex = 9;
             // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Dock = DockStyle.Fill;
+            label32.Location = new Point(41, 33);
+            label32.Margin = new Padding(2);
+            label32.Name = "label32";
+            label32.Size = new Size(36, 27);
+            label32.TabIndex = 4;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Dock = DockStyle.Fill;
+            label31.Location = new Point(2, 33);
+            label31.Margin = new Padding(2);
+            label31.Name = "label31";
+            label31.Size = new Size(35, 27);
+            label31.TabIndex = 3;
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Dock = DockStyle.Fill;
+            label30.Location = new Point(41, 2);
+            label30.Margin = new Padding(2);
+            label30.Name = "label30";
+            label30.Size = new Size(36, 27);
+            label30.TabIndex = 2;
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Dock = DockStyle.Fill;
+            label29.Location = new Point(2, 2);
+            label29.Margin = new Padding(2);
+            label29.Name = "label29";
+            label29.Size = new Size(35, 27);
+            label29.TabIndex = 1;
+            // 
             // tblRow7
             // 
             tblRow7.ColumnCount = 2;
             tblRow7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblRow7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblRow7.Controls.Add(label28, 1, 1);
+            tblRow7.Controls.Add(label27, 0, 1);
+            tblRow7.Controls.Add(label26, 1, 0);
+            tblRow7.Controls.Add(label25, 0, 0);
             tblRow7.Dock = DockStyle.Fill;
             tblRow7.Location = new Point(3, 494);
             tblRow7.Margin = new Padding(3, 4, 3, 4);
@@ -283,11 +617,55 @@
             tblRow7.Size = new Size(79, 62);
             tblRow7.TabIndex = 8;
             // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Dock = DockStyle.Fill;
+            label28.Location = new Point(41, 33);
+            label28.Margin = new Padding(2);
+            label28.Name = "label28";
+            label28.Size = new Size(36, 27);
+            label28.TabIndex = 4;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Dock = DockStyle.Fill;
+            label27.Location = new Point(2, 33);
+            label27.Margin = new Padding(2);
+            label27.Name = "label27";
+            label27.Size = new Size(35, 27);
+            label27.TabIndex = 3;
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Dock = DockStyle.Fill;
+            label26.Location = new Point(41, 2);
+            label26.Margin = new Padding(2);
+            label26.Name = "label26";
+            label26.Size = new Size(36, 27);
+            label26.TabIndex = 2;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Dock = DockStyle.Fill;
+            label25.Location = new Point(2, 2);
+            label25.Margin = new Padding(2);
+            label25.Name = "label25";
+            label25.Size = new Size(35, 27);
+            label25.TabIndex = 1;
+            // 
             // tblRow6
             // 
             tblRow6.ColumnCount = 2;
             tblRow6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblRow6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblRow6.Controls.Add(label24, 1, 1);
+            tblRow6.Controls.Add(label23, 0, 1);
+            tblRow6.Controls.Add(label22, 1, 0);
+            tblRow6.Controls.Add(label21, 0, 0);
             tblRow6.Dock = DockStyle.Fill;
             tblRow6.Location = new Point(3, 424);
             tblRow6.Margin = new Padding(3, 4, 3, 4);
@@ -298,11 +676,55 @@
             tblRow6.Size = new Size(79, 62);
             tblRow6.TabIndex = 7;
             // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Dock = DockStyle.Fill;
+            label24.Location = new Point(41, 33);
+            label24.Margin = new Padding(2);
+            label24.Name = "label24";
+            label24.Size = new Size(36, 27);
+            label24.TabIndex = 4;
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Dock = DockStyle.Fill;
+            label23.Location = new Point(2, 33);
+            label23.Margin = new Padding(2);
+            label23.Name = "label23";
+            label23.Size = new Size(35, 27);
+            label23.TabIndex = 3;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Dock = DockStyle.Fill;
+            label22.Location = new Point(41, 2);
+            label22.Margin = new Padding(2);
+            label22.Name = "label22";
+            label22.Size = new Size(36, 27);
+            label22.TabIndex = 2;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Dock = DockStyle.Fill;
+            label21.Location = new Point(2, 2);
+            label21.Margin = new Padding(2);
+            label21.Name = "label21";
+            label21.Size = new Size(35, 27);
+            label21.TabIndex = 1;
+            // 
             // tblRow5
             // 
             tblRow5.ColumnCount = 2;
             tblRow5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblRow5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblRow5.Controls.Add(label20, 1, 1);
+            tblRow5.Controls.Add(label19, 0, 1);
+            tblRow5.Controls.Add(label18, 1, 0);
+            tblRow5.Controls.Add(label17, 0, 0);
             tblRow5.Dock = DockStyle.Fill;
             tblRow5.Location = new Point(3, 354);
             tblRow5.Margin = new Padding(3, 4, 3, 4);
@@ -313,11 +735,55 @@
             tblRow5.Size = new Size(79, 62);
             tblRow5.TabIndex = 6;
             // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Dock = DockStyle.Fill;
+            label20.Location = new Point(41, 33);
+            label20.Margin = new Padding(2);
+            label20.Name = "label20";
+            label20.Size = new Size(36, 27);
+            label20.TabIndex = 4;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Dock = DockStyle.Fill;
+            label19.Location = new Point(2, 33);
+            label19.Margin = new Padding(2);
+            label19.Name = "label19";
+            label19.Size = new Size(35, 27);
+            label19.TabIndex = 3;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Dock = DockStyle.Fill;
+            label18.Location = new Point(41, 2);
+            label18.Margin = new Padding(2);
+            label18.Name = "label18";
+            label18.Size = new Size(36, 27);
+            label18.TabIndex = 2;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Dock = DockStyle.Fill;
+            label17.Location = new Point(2, 2);
+            label17.Margin = new Padding(2);
+            label17.Name = "label17";
+            label17.Size = new Size(35, 27);
+            label17.TabIndex = 1;
+            // 
             // tblRow4
             // 
             tblRow4.ColumnCount = 2;
             tblRow4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblRow4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblRow4.Controls.Add(label16, 1, 1);
+            tblRow4.Controls.Add(label15, 0, 1);
+            tblRow4.Controls.Add(label14, 1, 0);
+            tblRow4.Controls.Add(label13, 0, 0);
             tblRow4.Dock = DockStyle.Fill;
             tblRow4.Location = new Point(3, 284);
             tblRow4.Margin = new Padding(3, 4, 3, 4);
@@ -328,11 +794,55 @@
             tblRow4.Size = new Size(79, 62);
             tblRow4.TabIndex = 5;
             // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Dock = DockStyle.Fill;
+            label16.Location = new Point(41, 33);
+            label16.Margin = new Padding(2);
+            label16.Name = "label16";
+            label16.Size = new Size(36, 27);
+            label16.TabIndex = 4;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Dock = DockStyle.Fill;
+            label15.Location = new Point(2, 33);
+            label15.Margin = new Padding(2);
+            label15.Name = "label15";
+            label15.Size = new Size(35, 27);
+            label15.TabIndex = 3;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Dock = DockStyle.Fill;
+            label14.Location = new Point(41, 2);
+            label14.Margin = new Padding(2);
+            label14.Name = "label14";
+            label14.Size = new Size(36, 27);
+            label14.TabIndex = 2;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Dock = DockStyle.Fill;
+            label13.Location = new Point(2, 2);
+            label13.Margin = new Padding(2);
+            label13.Name = "label13";
+            label13.Size = new Size(35, 27);
+            label13.TabIndex = 1;
+            // 
             // tblRow3
             // 
             tblRow3.ColumnCount = 2;
             tblRow3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblRow3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblRow3.Controls.Add(label12, 1, 1);
+            tblRow3.Controls.Add(label11, 0, 1);
+            tblRow3.Controls.Add(label10, 1, 0);
+            tblRow3.Controls.Add(label9, 0, 0);
             tblRow3.Dock = DockStyle.Fill;
             tblRow3.Location = new Point(3, 214);
             tblRow3.Margin = new Padding(3, 4, 3, 4);
@@ -342,6 +852,46 @@
             tblRow3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tblRow3.Size = new Size(79, 62);
             tblRow3.TabIndex = 4;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Dock = DockStyle.Fill;
+            label12.Location = new Point(41, 33);
+            label12.Margin = new Padding(2);
+            label12.Name = "label12";
+            label12.Size = new Size(36, 27);
+            label12.TabIndex = 4;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Dock = DockStyle.Fill;
+            label11.Location = new Point(2, 33);
+            label11.Margin = new Padding(2);
+            label11.Name = "label11";
+            label11.Size = new Size(35, 27);
+            label11.TabIndex = 3;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Dock = DockStyle.Fill;
+            label10.Location = new Point(41, 2);
+            label10.Margin = new Padding(2);
+            label10.Name = "label10";
+            label10.Size = new Size(36, 27);
+            label10.TabIndex = 2;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Dock = DockStyle.Fill;
+            label9.Location = new Point(2, 2);
+            label9.Margin = new Padding(2);
+            label9.Name = "label9";
+            label9.Size = new Size(35, 27);
+            label9.TabIndex = 1;
             // 
             // button40
             // 
@@ -799,62 +1349,6 @@
             button20.TabIndex = 19;
             button20.UseVisualStyleBackColor = false;
             // 
-            // lblCode1
-            // 
-            lblCode1.AutoSize = true;
-            lblCode1.BackColor = Color.White;
-            lblCode1.BorderStyle = BorderStyle.FixedSingle;
-            lblCode1.Dock = DockStyle.Fill;
-            lblCode1.Font = new Font("Showcard Gothic", 24F, FontStyle.Bold);
-            lblCode1.Location = new Point(88, 0);
-            lblCode1.Name = "lblCode1";
-            lblCode1.Size = new Size(79, 70);
-            lblCode1.TabIndex = 20;
-            lblCode1.Text = "?";
-            lblCode1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblCode2
-            // 
-            lblCode2.AutoSize = true;
-            lblCode2.BackColor = Color.White;
-            lblCode2.BorderStyle = BorderStyle.FixedSingle;
-            lblCode2.Dock = DockStyle.Fill;
-            lblCode2.Font = new Font("Showcard Gothic", 24F, FontStyle.Bold);
-            lblCode2.Location = new Point(173, 0);
-            lblCode2.Name = "lblCode2";
-            lblCode2.Size = new Size(79, 70);
-            lblCode2.TabIndex = 21;
-            lblCode2.Text = "?";
-            lblCode2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblCode3
-            // 
-            lblCode3.AutoSize = true;
-            lblCode3.BackColor = Color.White;
-            lblCode3.BorderStyle = BorderStyle.FixedSingle;
-            lblCode3.Dock = DockStyle.Fill;
-            lblCode3.Font = new Font("Showcard Gothic", 24F, FontStyle.Bold);
-            lblCode3.Location = new Point(258, 0);
-            lblCode3.Name = "lblCode3";
-            lblCode3.Size = new Size(79, 70);
-            lblCode3.TabIndex = 22;
-            lblCode3.Text = "?";
-            lblCode3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblCode4
-            // 
-            lblCode4.AutoSize = true;
-            lblCode4.BackColor = Color.White;
-            lblCode4.BorderStyle = BorderStyle.FixedSingle;
-            lblCode4.Dock = DockStyle.Fill;
-            lblCode4.Font = new Font("Showcard Gothic", 24F, FontStyle.Bold);
-            lblCode4.Location = new Point(343, 0);
-            lblCode4.Name = "lblCode4";
-            lblCode4.Size = new Size(80, 70);
-            lblCode4.TabIndex = 23;
-            lblCode4.Text = "?";
-            lblCode4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // button21
             // 
             button21.BackColor = Color.White;
@@ -1089,7 +1583,7 @@
             tblColors.Controls.Add(btnYellow, 0, 3);
             tblColors.Controls.Add(btnGreen, 0, 4);
             tblColors.Controls.Add(btnBlue, 0, 5);
-            tblColors.Controls.Add(button45, 0, 6);
+            tblColors.Controls.Add(btnPurple, 0, 6);
             tblColors.Controls.Add(btnBlack, 0, 7);
             tblColors.Controls.Add(btnPink, 0, 2);
             tblColors.Dock = DockStyle.Fill;
@@ -1144,17 +1638,17 @@
             btnBlue.Text = "Blue";
             btnBlue.UseVisualStyleBackColor = false;
             // 
-            // button45
+            // btnPurple
             // 
-            button45.BackColor = Color.Purple;
-            button45.Dock = DockStyle.Fill;
-            button45.FlatStyle = FlatStyle.Popup;
-            button45.Location = new Point(3, 619);
-            button45.Name = "button45";
-            button45.Size = new Size(66, 71);
-            button45.TabIndex = 11;
-            button45.Text = "Purple";
-            button45.UseVisualStyleBackColor = false;
+            btnPurple.BackColor = Color.Purple;
+            btnPurple.Dock = DockStyle.Fill;
+            btnPurple.FlatStyle = FlatStyle.Popup;
+            btnPurple.Location = new Point(3, 619);
+            btnPurple.Name = "btnPurple";
+            btnPurple.Size = new Size(66, 71);
+            btnPurple.TabIndex = 11;
+            btnPurple.Text = "Purple";
+            btnPurple.UseVisualStyleBackColor = false;
             // 
             // btnBlack
             // 
@@ -1192,7 +1686,26 @@
             Name = "frmMastermind";
             Text = "Mastermind";
             tblBoard.ResumeLayout(false);
-            tblBoard.PerformLayout();
+            tblRow2.ResumeLayout(false);
+            tblRow2.PerformLayout();
+            tblRow1.ResumeLayout(false);
+            tblRow1.PerformLayout();
+            tblRow10.ResumeLayout(false);
+            tblRow10.PerformLayout();
+            tblRow9.ResumeLayout(false);
+            tblRow9.PerformLayout();
+            tblRow8.ResumeLayout(false);
+            tblRow8.PerformLayout();
+            tblRow7.ResumeLayout(false);
+            tblRow7.PerformLayout();
+            tblRow6.ResumeLayout(false);
+            tblRow6.PerformLayout();
+            tblRow5.ResumeLayout(false);
+            tblRow5.PerformLayout();
+            tblRow4.ResumeLayout(false);
+            tblRow4.PerformLayout();
+            tblRow3.ResumeLayout(false);
+            tblRow3.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tblMainLeft.ResumeLayout(false);
             tblMainLeft.PerformLayout();
@@ -1244,10 +1757,6 @@
         private Button button18;
         private Button button19;
         private Button button20;
-        private Label lblCode1;
-        private Label lblCode2;
-        private Label lblCode3;
-        private Label lblCode4;
         private Button button21;
         private Button button22;
         private TableLayoutPanel tblRow1;
@@ -1273,12 +1782,56 @@
         private Button btnYellow;
         private Button btnGreen;
         private Button btnBlue;
-        private Button button45;
+        private Button btnPurple;
         private Button btnBlack;
         private Button btnPink;
         private TableLayoutPanel tableLayoutPanel2;
         private Button btnCheckCode;
         private Button btnHelp;
         private Button btnNewGame;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Label label40;
+        private Label label39;
+        private Label label38;
+        private Label label37;
+        private Label label36;
+        private Label label35;
+        private Label label34;
+        private Label label33;
+        private Label label32;
+        private Label label31;
+        private Label label30;
+        private Label label29;
+        private Label label28;
+        private Label label27;
+        private Label label26;
+        private Label label25;
+        private Label label24;
+        private Label label23;
+        private Label label22;
+        private Label label21;
+        private Label label20;
+        private Label label19;
+        private Label label18;
+        private Label label17;
+        private Label label16;
+        private Label label15;
+        private Label label14;
+        private Label label13;
+        private Label label12;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Button btnCode4;
+        private Button btnCode3;
+        private Button btnCode2;
+        private Button btnCode1;
     }
 }

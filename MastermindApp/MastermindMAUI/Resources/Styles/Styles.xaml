@@ -25,6 +25,7 @@
 
     <Style TargetType="Button" x:Key="color-button">
         <Setter Property="HeightRequest" Value="45"/>
+        <Setter Property="WidthRequest" Value="70"/>
         <Setter Property="TextColor" Value="White"/>
         <Setter Property="FontSize" Value="16"/>
         <Setter Property="Shadow">
@@ -34,6 +35,7 @@
 
     <Style TargetType="Button" x:Key="secret-code-button">
         <Setter Property="Text" Value="?"/>
+        <Setter Property="TextColor" Value="Black"/>
         <Setter Property="FontFamily" Value="SHOWG"/>
         <Setter Property="FontSize" Value="30"/>
         <Setter Property="BorderColor" Value="Black"/>

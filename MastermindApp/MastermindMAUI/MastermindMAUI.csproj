@@ -75,6 +75,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\MastermindSystem\MastermindSystem.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Main.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

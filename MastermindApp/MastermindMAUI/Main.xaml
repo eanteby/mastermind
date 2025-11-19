@@ -22,11 +22,11 @@
             </RadialGradientBrush>
         </Grid.Background>
 
-        <VerticalStackLayout VerticalOptions="End" HorizontalOptions="Start" Margin="10" Spacing="10">
-            <Label x:Name="lblMessage" TextColor="Black" Margin="10, 20, 20, 60" FontSize="30"/>
-            <RadioButton x:Name="optBeginner" Content="Beginner" Value="Beginner" IsChecked="True" FontSize="20"/>
-            <RadioButton x:Name="optAdvanced" Content="Advanced" Value="Advanced" FontSize="20"/>
-            <Button x:Name="btnNewGame" Text="New Game" WidthRequest="150" HeightRequest="65" Margin="10" CornerRadius="2">
+        <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*,*, *" HorizontalOptions="Start" VerticalOptions="FillAndExpand">
+            <Label x:Name="lblMessage" Grid.Row="0" HorizontalOptions="Start" Margin="10, 20, 20, 60" FontSize="25" VerticalOptions="Start" TextColor="Orange" HeightRequest="100" />
+            <RadioButton x:Name="optBeginner" Grid.Row="2" HorizontalOptions="Start" Content="Beginner" Value="Beginner" IsChecked="True" FontSize="20" VerticalOptions="End" Margin="10"/>
+            <RadioButton x:Name="optAdvanced" Grid.Row="3" HorizontalOptions="Start" Content="Advanced" Value="Advanced" FontSize="20" VerticalOptions="Start" Margin="10"/>
+            <Button x:Name="btnNewGame" Grid.Row="4" HorizontalOptions="Start" Text="New Game" WidthRequest="150" HeightRequest="65" Margin="20" CornerRadius="2" VerticalOptions="End">
                 <Button.Shadow>
                     <Shadow Brush="Gray"/>
                 </Button.Shadow>
@@ -37,7 +37,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnCheckCode" Text="Check Code" WidthRequest="150" HeightRequest="65" Margin="10" CornerRadius="2">
+            <Button x:Name="btnCheckCode" Grid.Row="5" HorizontalOptions="Start" Text="Check Code" WidthRequest="150" HeightRequest="65" Margin="20" CornerRadius="2" VerticalOptions="End">
                 <Button.Shadow>
                     <Shadow Brush="Gray"/>
                 </Button.Shadow>
@@ -48,145 +48,146 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-        </VerticalStackLayout>
+        </Grid>
         
-        <Grid ColumnDefinitions="15, *, *, *, *, *, 15" RowDefinitions="2, *, *, *, *, *, *, *, *, *, *, *, 2" HorizontalOptions="Fill" RowSpacing="10" ColumnSpacing="5" BackgroundColor="White" Grid.Column="1" Margin="10">
+
+        <Grid x:Name="LabelGrid" ColumnDefinitions="15, *, *, *, *, *, 15" RowDefinitions="2, *, *, *, *, *, *, *, *, *, *, *, 2" HorizontalOptions="Fill" RowSpacing="10" ColumnSpacing="5" BackgroundColor="White" Grid.Column="1" Margin="10">
             <Grid.Shadow>
                 <Shadow Brush="Gray"/>
             </Grid.Shadow>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="2" Grid.Column="1">
-                <Button Grid.Column="0" Grid.Row="1"/>
-                <Button Grid.Column="0" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl1" Grid.Column="0" Grid.Row="1"/>
+                <Label x:Name="lbl2" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="lbl3" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="lbl4" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="3" Grid.Column="1">
-                <Button Grid.Column="0" Grid.Row="1"/>
-                <Button Grid.Column="0" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl5" Grid.Column="0" Grid.Row="1"/>
+                <Label x:Name="lbl6" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="lbl7" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="lbl8" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="4" Grid.Column="1">
-                <Button Grid.Column="0" Grid.Row="1"/>
-                <Button Grid.Column="0" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl9" Grid.Column="0" Grid.Row="1"/>
+                <Label x:Name="lbl10" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="lbl11" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="lbl12" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="5" Grid.Column="1">
-                <Button Grid.Column="0" Grid.Row="1"/>
-                <Button Grid.Column="0" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl13" Grid.Column="0" Grid.Row="1"/>
+                <Label x:Name="lbl14" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="lbl15" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="lbl16" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="6" Grid.Column="1">
-                <Button Grid.Column="0" Grid.Row="1"/>
-                <Button Grid.Column="0" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl17" Grid.Column="0" Grid.Row="1"/>
+                <Label x:Name="lbl18" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="lbl19" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="lbl20" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="7" Grid.Column="1">
-                <Button Grid.Column="0" Grid.Row="1"/>
-                <Button Grid.Column="0" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl21" Grid.Column="0" Grid.Row="1"/>
+                <Label x:Name="lbl22" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="lbl23" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="lbl24" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="8" Grid.Column="1">
-                <Button Grid.Column="0" Grid.Row="1"/>
-                <Button Grid.Column="0" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl25" Grid.Column="0" Grid.Row="1"/>
+                <Label x:Name="lbl26" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="lbl27" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="lbl28" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="9" Grid.Column="1">
-                <Button Grid.Column="0" Grid.Row="1"/>
-                <Button Grid.Column="0" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl29" Grid.Column="0" Grid.Row="1"/>
+                <Label x:Name="lbl30" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="lbl31" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="lbl32" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="10" Grid.Column="1">
-                <Button Grid.Column="0" Grid.Row="1"/>
-                <Button Grid.Column="0" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl33" Grid.Column="0" Grid.Row="1"/>
+                <Label x:Name="lbl34" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="lbl35" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="lbl36" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="11" Grid.Column="1">
-                <Button Grid.Column="0" Grid.Row="1"/>
-                <Button Grid.Column="0" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="0"/>
-                <Button Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl37" Grid.Column="0" Grid.Row="1"/>
+                <Label x:Name="lbl38" Grid.Column="0" Grid.Row="0"/>
+                <Label x:Name="lbl39" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="lbl40" Grid.Column="1" Grid.Row="1"/>
             </Grid>
 
-            <Button Grid.Column="2" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
-            <Button Grid.Column="3" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
-            <Button Grid.Column="4" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
-            <Button Grid.Column="5" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
+            <Button x:Name="btncode1" Grid.Column="2" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
+            <Button x:Name="btncode2" Grid.Column="3" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
+            <Button x:Name="btncode3" Grid.Column="4" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
+            <Button x:Name="btncode4" Grid.Column="5" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>
 
-            <Button Grid.Column="5" Grid.Row="2"/>
-            <Button Grid.Column="2" Grid.Row="2"/>
-            <Button Grid.Column="3" Grid.Row="2"/>
-            <Button Grid.Column="4" Grid.Row="2"/>
+            <Button x:Name="btn1" Grid.Column="2" Grid.Row="2"/>
+            <Button x:Name="btn2" Grid.Column="3" Grid.Row="2"/>
+            <Button x:Name="btn3" Grid.Column="4" Grid.Row="2"/>
+            <Button x:Name="btn4" Grid.Column="5" Grid.Row="2"/>
+
+            <Button x:Name="btn5" Grid.Column="2" Grid.Row="3"/>
+            <Button x:Name="btn6" Grid.Column="3" Grid.Row="3"/>
+            <Button x:Name="btn7" Grid.Column="4" Grid.Row="3"/>
+            <Button x:Name="btn8" Grid.Column="5" Grid.Row="3"/>
+
+            <Button x:Name="btn9" Grid.Column="2" Grid.Row="4"/>
+            <Button x:Name="btn10" Grid.Column="3" Grid.Row="4"/>
+            <Button x:Name="btn11" Grid.Column="4" Grid.Row="4"/>
+            <Button x:Name="btn12" Grid.Column="5" Grid.Row="4"/>
+
+            <Button x:Name="btn13" Grid.Column="2" Grid.Row="5"/>
+            <Button x:Name="btn14" Grid.Column="3" Grid.Row="5"/>
+            <Button x:Name="btn15" Grid.Column="4" Grid.Row="5"/>
+            <Button x:Name="btn16" Grid.Column="5" Grid.Row="5"/>
+
+            <Button x:Name="btn17" Grid.Column="2" Grid.Row="6"/>
+            <Button x:Name="btn18" Grid.Column="3" Grid.Row="6"/>
+            <Button x:Name="btn19" Grid.Column="4" Grid.Row="6"/>
+            <Button x:Name="btn20" Grid.Column="5" Grid.Row="6"/>
+
+            <Button x:Name="btn21" Grid.Column="2" Grid.Row="7"/>
+            <Button x:Name="btn22" Grid.Column="3" Grid.Row="7"/>
+            <Button x:Name="btn23" Grid.Column="4" Grid.Row="7"/>
+            <Button x:Name="btn24" Grid.Column="5" Grid.Row="7"/>
             
-            <Button Grid.Column="5" Grid.Row="3"/>
-            <Button Grid.Column="2" Grid.Row="3"/>
-            <Button Grid.Column="3" Grid.Row="3"/>
-            <Button Grid.Column="4" Grid.Row="3"/>
+            <Button x:Name="btn25" Grid.Column="2" Grid.Row="8"/>
+            <Button x:Name="btn26" Grid.Column="3" Grid.Row="8"/>
+            <Button x:Name="btn27" Grid.Column="4" Grid.Row="8"/>
+            <Button x:Name="btn28" Grid.Column="5" Grid.Row="8"/>
 
-            <Button Grid.Column="5" Grid.Row="4"/>
-            <Button Grid.Column="2" Grid.Row="4"/>
-            <Button Grid.Column="3" Grid.Row="4"/>
-            <Button Grid.Column="4" Grid.Row="4"/>
+            <Button x:Name="btn29" Grid.Column="2" Grid.Row="9"/>
+            <Button x:Name="btn30" Grid.Column="3" Grid.Row="9"/>
+            <Button x:Name="btn31" Grid.Column="4" Grid.Row="9"/>
+            <Button x:Name="btn32" Grid.Column="5" Grid.Row="9"/>
 
-            <Button Grid.Column="5" Grid.Row="5"/>
-            <Button Grid.Column="2" Grid.Row="5"/>
-            <Button Grid.Column="3" Grid.Row="5"/>
-            <Button Grid.Column="4" Grid.Row="5"/>
+            <Button x:Name="btn33" Grid.Column="2" Grid.Row="10"/>
+            <Button x:Name="btn34" Grid.Column="3" Grid.Row="10"/>
+            <Button x:Name="btn35" Grid.Column="4" Grid.Row="10"/>
+            <Button x:Name="btn36" Grid.Column="5" Grid.Row="10"/>
 
-            <Button Grid.Column="5" Grid.Row="6"/>
-            <Button Grid.Column="2" Grid.Row="6"/>
-            <Button Grid.Column="3" Grid.Row="6"/>
-            <Button Grid.Column="4" Grid.Row="6"/>
+            <Button x:Name="btn37" Grid.Column="2" Grid.Row="11"/>
+            <Button x:Name="btn38" Grid.Column="3" Grid.Row="11"/>
+            <Button x:Name="btn39" Grid.Column="4" Grid.Row="11"/>
+            <Button x:Name="btn40" Grid.Column="5" Grid.Row="11"/>
 
-            <Button Grid.Column="5" Grid.Row="7"/>
-            <Button Grid.Column="2" Grid.Row="7"/>
-            <Button Grid.Column="3" Grid.Row="7"/>
-            <Button Grid.Column="4" Grid.Row="7"/>
-
-            <Button Grid.Column="5" Grid.Row="8"/>
-            <Button Grid.Column="2" Grid.Row="8"/>
-            <Button Grid.Column="3" Grid.Row="8"/>
-            <Button Grid.Column="4" Grid.Row="8"/>
-
-            <Button Grid.Column="5" Grid.Row="9"/>
-            <Button Grid.Column="2" Grid.Row="9"/>
-            <Button Grid.Column="3" Grid.Row="9"/>
-            <Button Grid.Column="4" Grid.Row="9"/>
-
-            <Button Grid.Column="5" Grid.Row="10"/>
-            <Button Grid.Column="2" Grid.Row="10"/>
-            <Button Grid.Column="3" Grid.Row="10"/>
-            <Button Grid.Column="4" Grid.Row="10"/>
-
-            <Button Grid.Column="5" Grid.Row="11"/>
-            <Button Grid.Column="2" Grid.Row="11"/>
-            <Button Grid.Column="3" Grid.Row="11"/>
-            <Button Grid.Column="4" Grid.Row="11"/>
-
-            <Button Grid.Column="5" Grid.Row="12"/>
-            <Button Grid.Column="2" Grid.Row="12"/>
+            <!--<Button Grid.Column="2" Grid.Row="12"/>
             <Button Grid.Column="3" Grid.Row="12"/>
             <Button Grid.Column="4" Grid.Row="12"/>
+            <Button Grid.Column="5" Grid.Row="12"/>-->
         </Grid>
 
-        <VerticalStackLayout Grid.Column="2" Spacing="10" VerticalOptions="Center">
+        <VerticalStackLayout x:Name="ColorGrid" Grid.Column="2" Spacing="10" VerticalOptions="Center">
             <Button BackgroundColor="DeepPink" Text="Pink" Style="{StaticResource Key=color-button}"/>
             <Button BackgroundColor="Yellow" Text="Yellow" Style="{StaticResource Key=color-button}"/>
             <Button BackgroundColor="LimeGreen" Text="Green" Style="{StaticResource Key=color-button}"/>
