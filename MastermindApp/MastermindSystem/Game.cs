@@ -94,7 +94,7 @@ namespace MastermindSystem
                 this.InvokePropertyChanged("Comment");
             }
         }
-        public List<String> lstcomments { get; set; } = new() { "You got this!", "You can do it!", "Keep trying!", "Think hard!", "Don't give up!" };
+        public List<String> Comments { get; set; } = new() { "You got this!", "You can do it!", "Keep trying!", "Think hard!", "Don't give up!" };
         public String Comment
         {
             get
@@ -106,7 +106,7 @@ namespace MastermindSystem
                         _comment = "Select a level and click new game to start. Click the orange ? for game instructions.";
                         break;
                     case GameStatusEnum.Playing:
-                        _comment = ((10 - NumGuess) < 10 ? lstcomments[rnd.Next(lstcomments.Count())] + " " : "") + (10 - NumGuess) + " guesses left!";
+                        _comment = ((10 - NumGuess) < 10 ? Comments[rnd.Next(Comments.Count())] + " " : "") + (10 - NumGuess) + " guesses left!";
                         break;
                     case GameStatusEnum.Won:
                         _comment = "Awesome job! You cracked the code! Select a level and click new game to play again.";
