@@ -7,13 +7,13 @@ public partial class Main : ContentPage
 	Game game = new();
     List<Button> lstbtn;
     List<Label> lstlbl;
-    Color color;
 	public Main()
 	{
 		InitializeComponent();
         this.BindingContext = game;
         btnNewGame.Clicked += BtnNewGame_Clicked;
         btnCheckCode.Clicked += BtnCheckCode_Clicked;
+        btnHelp.Clicked += BtnHelp_Clicked;
         lstbtn = new()
             {
                 btncode1, btncode2, btncode3, btncode4,
@@ -46,16 +46,17 @@ public partial class Main : ContentPage
         {
             b.Clicked += B_Clicked;
             Spot spot = game.Spots[lstbtn.IndexOf(b)];
-            this.BindingContext = spot;
-            b.SetBinding(Button.BackgroundColorProperty, "BackColorMaui");
+            b.BindingContext = spot;
+            b.SetBinding(Button.BackgroundColorProperty, "MauiSpotColor");
+            b.SetBinding(Button.TextProperty, "Text");
         });
 
         lstlbl.ForEach(l =>
         {
 
             FeedbackSpot feedbackspot = game.FeedbackSpots[lstlbl.IndexOf(l)];
-            this.BindingContext = feedbackspot;
-            l.SetBinding(Button.BackgroundColorProperty, "LabelBackColor");
+            l.BindingContext = feedbackspot;
+            l.SetBinding(Button.BackgroundColorProperty, "MauiFeedbackSpotColor");
         });
 
         foreach (Button b in ColorGrid)
@@ -67,7 +68,25 @@ public partial class Main : ContentPage
         this.BindingContext = game;
         lblMessage.SetBinding(Label.TextProperty, "Comment");
 
-	}
+    }
+
+    private Game.SpotColorEnum GetColor(Button b)
+    {
+        if (b == btnPink)
+            return Game.SpotColorEnum.Pink;
+        else if (b == btnYellow)
+            return Game.SpotColorEnum.Yellow;
+        else if (b == btnGreen)
+            return Game.SpotColorEnum.Green;
+        else if (b == btnBlue)
+            return Game.SpotColorEnum.Blue;
+        else if (b == btnPurple)
+            return Game.SpotColorEnum.Purple;
+        else if (b == btnBlack)
+            return Game.SpotColorEnum.Black;
+        else
+            return Game.SpotColorEnum.Default;
+    }
 
 
 
@@ -83,9 +102,9 @@ public partial class Main : ContentPage
 
     private void B_Clicked1(object? sender, EventArgs e)
     {
-        if (sender != null && sender is Button)
+        if (sender is Button button)
         {
-            color = ((Button)sender).BackgroundColor;
+            game.ChosenColor = GetColor((Button)sender);
         }
     }
 
@@ -94,4 +113,8 @@ public partial class Main : ContentPage
         game.StartGame(optBeginner.IsChecked);
     }
 
+    private void BtnHelp_Clicked(object? sender, EventArgs e)
+    {
+        DisplayAlert("Game Instructions", game.Instructions, "OK");
+    }
 }

@@ -6,7 +6,7 @@ namespace MastermindApp
         Game game = new();
         List<Label> lstlbl;
         List<Button> lstbutton;
-        public frmMastermind()
+        public frmMastermind() 
         {
             InitializeComponent();
 
@@ -43,7 +43,7 @@ namespace MastermindApp
             {
                 Spot spot = game.Spots[lstbutton.IndexOf(b)];
                 b.Click += B_Click;
-                b.DataBindings.Add("BackColor", spot, "BackColor");
+                b.DataBindings.Add("BackColor", spot, "SystemSpotColor");
                 b.DataBindings.Add("Text", spot, "Text");
             });
 
@@ -51,7 +51,7 @@ namespace MastermindApp
             {
 
                 FeedbackSpot feedbackspot = game.FeedbackSpots[lstlbl.IndexOf(l)];
-                l.DataBindings.Add("BackColor", feedbackspot, "LabelBackColor");
+                l.DataBindings.Add("BackColor", feedbackspot, "SystemFeedbackSpotColor");
             });
 
             btnCheckCode.Click += BtnCheckCode_Click;
@@ -63,6 +63,13 @@ namespace MastermindApp
             {
                 b.Click += B_Click1;
             }
+
+            btnBlack.Tag = Game.SpotColorEnum.Black;
+            btnBlue.Tag = Game.SpotColorEnum.Blue;
+            btnGreen.Tag = Game.SpotColorEnum.Green;
+            btnPink.Tag = Game.SpotColorEnum.Pink;
+            btnPurple.Tag = Game.SpotColorEnum.Purple;
+            btnYellow.Tag = Game.SpotColorEnum.Yellow;
         }
         private void BtnNewGame_Click(object? sender, EventArgs e)
         {
@@ -78,7 +85,7 @@ namespace MastermindApp
         {
             if (sender != null && sender is Button)
             {
-                game.Color = ((Button)sender).BackColor;
+                game.ChosenColor = (Game.SpotColorEnum)((Button)sender).Tag;
             }
         }
 

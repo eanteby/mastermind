@@ -30,20 +30,20 @@ public class MastermindTest
     {
         Game game = new();
         game.StartGame(isbeginner);
-        string msg = $"Color Code has {game.ColorCode.Count()} colors: {game.ColorCode[0].Name}, {game.ColorCode[1].Name}, {game.ColorCode[2].Name}, and {game.ColorCode[3].Name} ";
+        string msg = $"Color Code has {game.ColorCode.Count()} colors: {game.ColorCode[0]}, {game.ColorCode[1]}, {game.ColorCode[2]}, and {game.ColorCode[3]} ";
         Assert.IsTrue(game.ColorCode.Count() == 4, msg);
         TestContext.WriteLine(msg);
     }
 
     [TestCase(5)]
-    public void MakeGuess(int num)
+    public void TakeGuess(int num)
     {
         Game game = new();
         game.StartGame();
-        game.Color = System.Drawing.Color.DeepPink;
+        game.ChosenColor = Game.SpotColorEnum.Pink;
         game.GuessColor(num);
-        string msg = $"Current color = {game.Color.ToString()}. Backcolor of current spot is {game.Spots[num].BackColor}";
-        Assert.IsTrue(game.Spots[num].BackColor == game.Color, msg);
+        string msg = $"Current color = {game.ChosenColor.ToString()}. Backcolor of current spot is {game.Spots[num].BackColor}";
+        Assert.IsTrue(game.Spots[num].BackColor == game.ChosenColor, msg);
         TestContext.WriteLine(msg);
     }
 
@@ -54,20 +54,20 @@ public class MastermindTest
     {
         Game game = new();
         game.StartGame(false);
-        game.Color = game.Colors[clr1];
+        game.ChosenColor = game.Colors[clr1];
         game.GuessColor(game.ActiveRow[0].Id);
-        game.Color = game.Colors[clr2];
+        game.ChosenColor = game.Colors[clr2];
         game.GuessColor(game.ActiveRow[1].Id);
-        game.Color = game.Colors[clr3];
+        game.ChosenColor = game.Colors[clr3];
         game.GuessColor(game.ActiveRow[2].Id);
-        game.Color = game.Colors[clr4];
+        game.ChosenColor = game.Colors[clr4];
         game.GuessColor(game.ActiveRow[3].Id);
         game.CheckCode();
-        string msg = $"Color code: {game.ColorCode[0].Name}, {game.ColorCode[1].Name}, {game.ColorCode[2].Name}, and {game.ColorCode[3].Name}. ";
-        msg += $"Guess: {game.Colors[clr1].Name}, {game.Colors[clr2].Name}, {game.Colors[clr3].Name}, and {game.Colors[clr4].Name}. Num Correct Color: {game.NumCorrectColor} Num Correct Position: {game.NumCorrectPosition}. " + Environment.NewLine;
-        msg += $"Num White labels {game.ActiveFeedbackRow.Where(l => l.LabelBackColor == game.CorrectColorBackColor).Count()}. Num black labels {game.ActiveFeedbackRow.Where(l => l.LabelBackColor == game.CorrectPostionBackColor).Count()}." + Environment.NewLine;
-        Assert.IsTrue(game.NumCorrectPosition == game.ActiveFeedbackRow.Where(l => l.LabelBackColor == game.CorrectPostionBackColor).Count() && game.NumCorrectColor == game.ActiveFeedbackRow.Where(l => l.LabelBackColor
-        == game.CorrectColorBackColor).Count(), msg);
+        string msg = $"Color code: {game.ColorCode[0]}, {game.ColorCode[1]}, {game.ColorCode[2]}, and {game.ColorCode[3]}. ";
+        msg += $"Guess: {game.Colors[clr1]}, {game.Colors[clr2]}, {game.Colors[clr3]}, and {game.Colors[clr4]}. Num Correct Color: {game.NumCorrectColor} Num Correct Position: {game.NumCorrectPosition}. " + Environment.NewLine;
+        msg += $"Num White labels {game.ActiveFeedbackRow.Where(l => l.LabelBackColor == Game.FeedbackSpotColorEnum.White).Count()}. Num black labels {game.ActiveFeedbackRow.Where(l => l.LabelBackColor == Game.FeedbackSpotColorEnum.Black).Count()}." + Environment.NewLine;
+        Assert.IsTrue(game.NumCorrectPosition == game.ActiveFeedbackRow.Where(l => l.LabelBackColor == Game.FeedbackSpotColorEnum.Black).Count() && game.NumCorrectColor == game.ActiveFeedbackRow.Where(l => l.LabelBackColor
+        == Game.FeedbackSpotColorEnum.White).Count(), msg);
         TestContext.WriteLine(msg);
     }
 
