@@ -59,8 +59,8 @@ namespace MastermindSystem
         public List<Spot> CodeRow { get; set; } = new();
         public List<SpotColorEnum> ColorCode { get; set; } = new();
         public SpotColorEnum ChosenColor { get; set; } = new();
-        //public int NumCorrectPosition { get; set; } = new();
-        //public int NumCorrectColor { get; set; } = new();
+        public int NumCorrectPosition { get; set; } = new();
+        public int NumCorrectColor { get; set; } = new();
 
         public List<Spot> ActiveRow
         {
@@ -205,6 +205,7 @@ namespace MastermindSystem
                 lstguessedspots.Add(s);
                 lstguessedcolors.Add(s.BackColor);
                 correctguesses += 1;
+                this.NumCorrectPosition += 1;
             });
             //check if win
             if (correctguesses == 4)
@@ -215,7 +216,6 @@ namespace MastermindSystem
             else
             {
                 //insert white label for every correct color in incorrect place
-                //this.NumCorrectColor = 0;
                 this.ActiveRow.ForEach(s =>
                 {
                     if ((this.ColorCode.Count(c => c == s.BackColor) > lstguessedcolors.Count(c => c == s.BackColor)) && lstguessedspots.Contains(s) == false)
@@ -226,26 +226,29 @@ namespace MastermindSystem
                             emptyspot.LabelBackColor = FeedbackSpotColorEnum.White;
                             InvokePropertyChanged("LabelBackColor");
                         }
-                        //this.NumCorrectColor += 1;
+                        this.NumCorrectColor += 1;
                         lstguessedcolors.Add(s.BackColor);
                         lstguessedspots.Add(s);
                     }
                 });
 
-                //move on to next turn
-                NumGuess = NumGuess + 1;
-                if (NumGuess > 9)
-                {
-                    gamestatus = GameStatusEnum.Lost;
-                    ShowAnswer();
-                }
-                else
-                {
-                    this.ActiveRow = Rows[Rows.IndexOf(this.ActiveRow) + 1];
-                    this.ActiveFeedbackRow = FeedbackRows[FeedbackRows.IndexOf(this.ActiveFeedbackRow) + 1];
-                }
             }
 
+        }
+
+        public void NextTurn()
+        {
+            NumGuess = NumGuess + 1;
+            if (NumGuess > 9)
+            {
+                gamestatus = GameStatusEnum.Lost;
+                ShowAnswer();
+            }
+            else
+            {
+                this.ActiveRow = Rows[Rows.IndexOf(this.ActiveRow) + 1];
+                this.ActiveFeedbackRow = FeedbackRows[FeedbackRows.IndexOf(this.ActiveFeedbackRow) + 1];
+            }
         }
 
         private void ShowAnswer()

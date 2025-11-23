@@ -93,6 +93,7 @@ public partial class Main : ContentPage
     private void BtnCheckCode_Clicked(object? sender, EventArgs e)
     {
         game.CheckCode();
+        game.NextTurn();
     }
 
     private void B_Clicked(object? sender, EventArgs e)

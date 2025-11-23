@@ -79,6 +79,7 @@ namespace MastermindApp
         private void BtnCheckCode_Click(object? sender, EventArgs e)
         {
             game.CheckCode();
+            game.NextTurn();
         }
 
         private void B_Click1(object? sender, EventArgs e)
