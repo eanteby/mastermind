@@ -22,8 +22,12 @@
             </RadialGradientBrush>
         </Grid.Background>
 
-        <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*,*, *" HorizontalOptions="Start" VerticalOptions="FillAndExpand">
-            <Label x:Name="lblMessage" Grid.Row="0" HorizontalOptions="Start" Margin="10, 20, 20, 60" FontSize="25" VerticalOptions="Start" TextColor="Orange" HeightRequest="100" />
+        <VerticalStackLayout Grid.Column="0" VerticalOptions="Start">
+            <Label x:Name="lblMessage" Grid.Row="0" HorizontalOptions="Start" Margin="10, 20, 20, 5" FontSize="25" VerticalOptions="Start" TextColor="Orange" HeightRequest="100" />
+            <Label x:Name="lblScore" Grid.Row="1" HorizontalOptions="Start" Margin="10, 20, 20, 20" FontSize="20" TextColor="White" Text="{Binding ScoreMessage}"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Column="0" VerticalOptions="End">
             <RadioButton x:Name="optBeginner" Grid.Row="2" HorizontalOptions="Start" Content="Beginner" Value="Beginner" IsChecked="True" FontSize="20" VerticalOptions="End" Margin="10"/>
             <RadioButton x:Name="optAdvanced" Grid.Row="3" HorizontalOptions="Start" Content="Advanced" Value="Advanced" FontSize="20" VerticalOptions="Start" Margin="10"/>
             <Button x:Name="btnNewGame" Grid.Row="5" HorizontalOptions="Start" Text="New Game" WidthRequest="150" HeightRequest="65" Margin="20" CornerRadius="2" VerticalOptions="End">
@@ -48,8 +52,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-        </Grid>
-        
+        </VerticalStackLayout>
 
         <Grid x:Name="LabelGrid" ColumnDefinitions="15, *, *, *, *, *, 15" RowDefinitions="2, *, *, *, *, *, *, *, *, *, *, *, 2" HorizontalOptions="Fill" RowSpacing="10" ColumnSpacing="5" BackgroundColor="White" Grid.Column="1" Margin="10">
             <Grid.Shadow>
@@ -120,10 +123,10 @@
             </Grid>
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Grid.Row="11" Grid.Column="1">
-                <Label x:Name="lbl37" Grid.Column="0" Grid.Row="1"/>
-                <Label x:Name="lbl38" Grid.Column="0" Grid.Row="0"/>
-                <Label x:Name="lbl39" Grid.Column="1" Grid.Row="0"/>
-                <Label x:Name="lbl40" Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl37" Grid.Column="0" Grid.Row="1" Margin="2"/>
+                <Label x:Name="lbl38" Grid.Column="0" Grid.Row="0" Margin="2"/>
+                <Label x:Name="lbl39" Grid.Column="1" Grid.Row="0" Margin="2"/>
+                <Label x:Name="lbl40" Grid.Column="1" Grid.Row="1" Margin="2"/>
             </Grid>
 
             <Button x:Name="btncode1" Grid.Column="2" Grid.Row="1" Style="{StaticResource Key=secret-code-button}"/>

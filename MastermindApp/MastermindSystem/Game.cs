@@ -18,8 +18,11 @@ namespace MastermindSystem
         private List<List<FeedbackSpot>> _feedbackrows = new();
         private String _comment;
 
+        private static int numgame = -1;
+
         public Game()
         {
+            numgame++;
 
             for (int i = 0; i < 44; i++)
             {
@@ -50,6 +53,8 @@ namespace MastermindSystem
         }
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        public int Score { get => 9 - Rows.IndexOf(ActiveRow); }
+
         public List<Spot> Spots { get; private set; } = new();
         public List<FeedbackSpot> FeedbackSpots { get; private set; } = new();
         public List<List<Spot>> Rows { get; set; } = new();
@@ -61,6 +66,8 @@ namespace MastermindSystem
         public SpotColorEnum ChosenColor { get; set; } = new();
         public int NumCorrectPosition { get; set; } = new();
         public int NumCorrectColor { get; set; } = new();
+        public static int HighScore { get; set; } = 0;
+        public String ScoreMessage { get => $"Number Game: {numgame} | Highest Score: {HighScore}"; }
 
         public List<Spot> ActiveRow
         {
@@ -134,7 +141,9 @@ namespace MastermindSystem
 
         public void StartGame(bool beginner = true)
         {
+            Game newgame = new();
             ClearBoard();
+            InvokePropertyChanged("ScoreMessage");
             this.gamestatus = GameStatusEnum.Playing;
             NumGuess = 0;
             ActiveRow = new();
@@ -212,6 +221,10 @@ namespace MastermindSystem
             {
                 gamestatus = GameStatusEnum.Won;
                 ShowAnswer();
+                UpdateHighestScore(Score);
+                InvokePropertyChanged("Score");
+                InvokePropertyChanged("HighScore");
+                InvokePropertyChanged("ScoreMessage");
             }
             else
             {
@@ -270,6 +283,14 @@ namespace MastermindSystem
                     InvokePropertyChanged("Comment");
                 }
             });
+        }
+
+        private void UpdateHighestScore(int score)
+        {
+            if (score > HighScore)
+            {
+                HighScore = score;
+            }
         }
 
         private void InvokePropertyChanged([CallerMemberName] string propertyname = "")
