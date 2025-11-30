@@ -18,11 +18,12 @@ namespace MastermindSystem
         private List<List<FeedbackSpot>> _feedbackrows = new();
         private String _comment;
 
-        private static int numgame = -1;
+        private static int numgames = 0;
 
         public Game()
         {
-            numgame++;
+            numgames++;
+            this.GameName = "Game " + numgames;
 
             for (int i = 0; i < 44; i++)
             {
@@ -54,6 +55,7 @@ namespace MastermindSystem
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public int Score { get => 9 - Rows.IndexOf(ActiveRow); }
+        public string GameName { get; private set; }
 
         public List<Spot> Spots { get; private set; } = new();
         public List<FeedbackSpot> FeedbackSpots { get; private set; } = new();
@@ -67,7 +69,7 @@ namespace MastermindSystem
         public int NumCorrectPosition { get; set; } = new();
         public int NumCorrectColor { get; set; } = new();
         public static int HighScore { get; set; } = 0;
-        public String ScoreMessage { get => $"Number Game: {numgame} | Highest Score: {HighScore}"; }
+        public String ScoreMessage { get => $"Highest Score: {HighScore} | Current Game: {GameName}"; }
 
         public List<Spot> ActiveRow
         {
@@ -141,7 +143,6 @@ namespace MastermindSystem
 
         public void StartGame(bool beginner = true)
         {
-            Game newgame = new();
             ClearBoard();
             InvokePropertyChanged("ScoreMessage");
             this.gamestatus = GameStatusEnum.Playing;

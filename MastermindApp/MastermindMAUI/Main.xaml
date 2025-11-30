@@ -28,9 +28,14 @@
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Column="0" VerticalOptions="End">
-            <RadioButton x:Name="optBeginner" Grid.Row="2" HorizontalOptions="Start" Content="Beginner" Value="Beginner" IsChecked="True" FontSize="20" VerticalOptions="End" Margin="10"/>
-            <RadioButton x:Name="optAdvanced" Grid.Row="3" HorizontalOptions="Start" Content="Advanced" Value="Advanced" FontSize="20" VerticalOptions="Start" Margin="10"/>
-            <Button x:Name="btnNewGame" Grid.Row="5" HorizontalOptions="Start" Text="New Game" WidthRequest="150" HeightRequest="65" Margin="20" CornerRadius="2" VerticalOptions="End">
+            <RadioButton x:Name="Game1Rb" HorizontalOptions="Start" Content="Game 1" IsChecked="true" Margin="10, 0, 0, 0" CheckedChanged="GameRb_CheckedChanged"/>
+            <RadioButton x:Name="Game2Rb" HorizontalOptions="Start" Content="Game 2" IsChecked="false" Margin="10, 0, 0, 0" CheckedChanged="GameRb_CheckedChanged"/>
+            <RadioButton x:Name="Game3Rb" HorizontalOptions="Start" Content="Game 3" IsChecked="false" Margin="10, 0, 0, 0" CheckedChanged="GameRb_CheckedChanged"/>
+            <Label HorizontalOptions="Start" BackgroundColor="Black" HeightRequest="1" WidthRequest="200" Margin="10"/>
+            <RadioButton x:Name="optBeginner" HorizontalOptions="Start" Content="Beginner" Value="Beginner" IsChecked="True" VerticalOptions="End" Margin="10, 0, 0, 0"/>
+            <RadioButton x:Name="optAdvanced" HorizontalOptions="Start" Content="Advanced" Value="Advanced" VerticalOptions="Start" Margin="10, 0, 0, 0"/>
+            <Grid ColumnDefinitions="*, *" RowDefinitions="*, Auto">
+            <Button x:Name="btnNewGame"  HorizontalOptions="Start" Text="New Game" Grid.Column="0" Grid.Row="1" WidthRequest="150" HeightRequest="65" Margin="20" CornerRadius="2" VerticalOptions="End">
                 <Button.Shadow>
                     <Shadow Brush="Gray"/>
                 </Button.Shadow>
@@ -41,7 +46,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnCheckCode" Grid.Row="4" HorizontalOptions="Start" Text="Check Code" WidthRequest="150" HeightRequest="65" Margin="20" CornerRadius="2" VerticalOptions="End">
+            <Button x:Name="btnCheckCode" HorizontalOptions="Start" Text="Check Code" Grid.Column="1" Grid.Row="1" WidthRequest="150" HeightRequest="65" Margin="20" CornerRadius="2" VerticalOptions="End">
                 <Button.Shadow>
                     <Shadow Brush="Gray"/>
                 </Button.Shadow>
@@ -52,6 +57,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+            </Grid>
         </VerticalStackLayout>
 
         <Grid x:Name="LabelGrid" ColumnDefinitions="15, *, *, *, *, *, 15" RowDefinitions="2, *, *, *, *, *, *, *, *, *, *, *, 2" HorizontalOptions="Fill" RowSpacing="10" ColumnSpacing="5" BackgroundColor="White" Grid.Column="1" Margin="10">
