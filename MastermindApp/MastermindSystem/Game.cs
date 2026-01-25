@@ -54,8 +54,9 @@ namespace MastermindSystem
         }
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public int Score { get => 9 - Rows.IndexOf(ActiveRow); }
         public string GameName { get; private set; }
+
+        public static int TotalWins { get; private set; }
 
         public List<Spot> Spots { get; private set; } = new();
         public List<FeedbackSpot> FeedbackSpots { get; private set; } = new();
@@ -68,8 +69,7 @@ namespace MastermindSystem
         public SpotColorEnum ChosenColor { get; set; } = new();
         public int NumCorrectPosition { get; set; } = new();
         public int NumCorrectColor { get; set; } = new();
-        public static int HighScore { get; set; } = 0;
-        public String ScoreMessage { get => $"Highest Score: {HighScore} | Current Game: {GameName}"; }
+        public String ScoreMessage { get => $"Total Wins: {TotalWins} | Current Game: {GameName}"; }
 
         public List<Spot> ActiveRow
         {
@@ -82,7 +82,7 @@ namespace MastermindSystem
             set { _activefeedbackspots = FeedbackRows[NumGuess]; }
         }
 
-        public bool IsBeginner { get; set; }
+        public bool IsBeginner { get; set; } = true;
         public GameStatusEnum GameStatus
         {
             get => gamestatus;
@@ -191,10 +191,7 @@ namespace MastermindSystem
         {
             if (gamestatus == GameStatusEnum.Playing) 
             {
-                if (ActiveRow.Count(s => s.BackColor == SpotColorEnum.Default) == 0)
-                {
-                    AddFeedbackLabels();
-                }
+                   AddFeedbackLabels();
             }
         }
 
@@ -222,9 +219,7 @@ namespace MastermindSystem
             {
                 gamestatus = GameStatusEnum.Won;
                 ShowAnswer();
-                UpdateHighestScore(Score);
-                InvokePropertyChanged("Score");
-                InvokePropertyChanged("HighScore");
+                TotalWins += 1;
                 InvokePropertyChanged("ScoreMessage");
             }
             else
@@ -284,14 +279,6 @@ namespace MastermindSystem
                     InvokePropertyChanged("Comment");
                 }
             });
-        }
-
-        private void UpdateHighestScore(int score)
-        {
-            if (score > HighScore)
-            {
-                HighScore = score;
-            }
         }
 
         private void InvokePropertyChanged([CallerMemberName] string propertyname = "")

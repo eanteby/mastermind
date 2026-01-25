@@ -28,12 +28,16 @@
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Column="0" VerticalOptions="End">
-            <RadioButton x:Name="Game1Rb" HorizontalOptions="Start" Content="Game 1" IsChecked="true" Margin="10, 0, 0, 0" CheckedChanged="GameRb_CheckedChanged"/>
-            <RadioButton x:Name="Game2Rb" HorizontalOptions="Start" Content="Game 2" IsChecked="false" Margin="10, 0, 0, 0" CheckedChanged="GameRb_CheckedChanged"/>
-            <RadioButton x:Name="Game3Rb" HorizontalOptions="Start" Content="Game 3" IsChecked="false" Margin="10, 0, 0, 0" CheckedChanged="GameRb_CheckedChanged"/>
+            <VerticalStackLayout>
+                <RadioButton x:Name="Game1Rb" HorizontalOptions="Start" Content="Game 1" IsChecked="True" Margin="10, 0, 0, 0" CheckedChanged="GameRb_CheckedChanged"/>
+                <RadioButton x:Name="Game2Rb" HorizontalOptions="Start" Content="Game 2" Margin="10, 0, 0, 0" CheckedChanged="GameRb_CheckedChanged"/>
+                <RadioButton x:Name="Game3Rb" HorizontalOptions="Start" Content="Game 3" Margin="10, 0, 0, 0" CheckedChanged="GameRb_CheckedChanged"/>
+            </VerticalStackLayout>
             <Label HorizontalOptions="Start" BackgroundColor="Black" HeightRequest="1" WidthRequest="200" Margin="10"/>
-            <RadioButton x:Name="optBeginner" HorizontalOptions="Start" Content="Beginner" Value="Beginner" IsChecked="True" VerticalOptions="End" Margin="10, 0, 0, 0"/>
-            <RadioButton x:Name="optAdvanced" HorizontalOptions="Start" Content="Advanced" Value="Advanced" VerticalOptions="Start" Margin="10, 0, 0, 0"/>
+            <VerticalStackLayout>
+                <RadioButton x:Name="optBeginner" HorizontalOptions="Start" Content="Beginner" Value="Beginner" IsChecked="True" VerticalOptions="End" Margin="10, 0, 0, 0"/>
+                <RadioButton x:Name="optAdvanced" HorizontalOptions="Start" Content="Advanced" Value="Advanced" VerticalOptions="Start" Margin="10, 0, 0, 0"/>
+            </VerticalStackLayout>
             <Grid ColumnDefinitions="*, *" RowDefinitions="*, Auto">
             <Button x:Name="btnNewGame"  HorizontalOptions="Start" Text="New Game" Grid.Column="0" Grid.Row="1" WidthRequest="150" HeightRequest="65" Margin="20" CornerRadius="2" VerticalOptions="End">
                 <Button.Shadow>

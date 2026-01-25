@@ -1,4 +1,6 @@
+
 using MastermindSystem;
+using static MastermindSystem.Game;
 
 namespace MastermindMAUI;
 
@@ -16,12 +18,14 @@ public partial class Main : ContentPage
         Game3Rb.BindingContext = lstgame[2];
         activegame = lstgame[0];
         this.BindingContext = activegame;
+        btnCheckCode.IsEnabled = false;
+       
         btnNewGame.Clicked += BtnNewGame_Clicked;
         btnCheckCode.Clicked += BtnCheckCode_Clicked;
         btnHelp.Clicked += BtnHelp_Clicked;
         lstbtn = new()
             {
-                btncode1, btncode2, btncode3, btncode4,
+                btncode1, btncode2, btncode3,   btncode4,
                 btn1, btn2, btn3, btn4,
                 btn5, btn6, btn7, btn8,
                 btn9, btn10, btn11, btn12,
@@ -91,17 +95,29 @@ public partial class Main : ContentPage
             return Game.SpotColorEnum.Default;
     }
 
+    private void UpdateLevelButtons()
+    {
+        bool isBeginner = activegame.IsBeginner;  
+
+        optBeginner.IsChecked = isBeginner;
+        optAdvanced.IsChecked = !isBeginner;
+    }
 
 
     private void BtnCheckCode_Clicked(object? sender, EventArgs e)
     {
         activegame.CheckCode();
+        btnCheckCode.IsEnabled = false;
         activegame.NextTurn();
     }
 
     private void B_Clicked(object? sender, EventArgs e)
     {
         activegame.GuessColor(lstbtn.IndexOf((Button)sender));
+        if (activegame.ActiveRow.Count(s => s.BackColor == SpotColorEnum.Default) == 0)
+        {
+            btnCheckCode.IsEnabled = true;
+        }
     }
 
     private void B_Clicked1(object? sender, EventArgs e)
@@ -141,6 +157,7 @@ public partial class Main : ContentPage
                 int index = lstlbl.IndexOf(l);
                 l.BindingContext = activegame.FeedbackSpots[index];
             });
+            UpdateLevelButtons();
         }
 
     }
