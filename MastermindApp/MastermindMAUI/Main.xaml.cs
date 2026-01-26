@@ -158,6 +158,11 @@ public partial class Main : ContentPage
                 l.BindingContext = activegame.FeedbackSpots[index];
             });
             UpdateLevelButtons();
+            if (activegame.ActiveRow.Count(s => s.BackColor == SpotColorEnum.Default) == 0)
+            {
+                btnCheckCode.IsEnabled = true;
+            }
+            else { btnCheckCode.IsEnabled =false;}
         }
 
     }
